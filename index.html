@@ -1,0 +1,328 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Gemüsegarten Sule Racker</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap">
+<style>
+/* Layout: ein Beet-Querschnitt als Hero, darunter Spendenstand, Bedarfsliste wie Saatreihen, Gartenjahr als Zeitleiste */
+:root {
+  --soil: #5B3A29;        /* Erde: Haupttext-Dunkel */
+  --leaf: #2F6B3A;        /* Blattgrün: Akzent */
+  --sprout: #8DBF5A;      /* Keimling: Fortschritt */
+  --carrot: #E27A2E;      /* Möhre: Hervorhebung */
+  --radish: #C8344C;      /* Radieschen */
+  --sky: #DCEBF2;         /* Himmel */
+  --paper: #FBF8F1;       /* Hintergrund */
+  --card: #FFFFFF;
+  --line: #E6DCCB;
+  --muted: #6E5D50;
+  --bed: #A9744A;         /* Holz */
+  --bed-dark: #7F5333;
+  --track: #EFE6D6;
+  --font-display: "Bricolage Grotesque", "Trebuchet MS", sans-serif;
+  --font-body: "Atkinson Hyperlegible", Verdana, sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --soil: #F1E6D8; --leaf: #8FCB86; --sprout: #9CCB69; --carrot: #F0954F; --radish: #E5627A;
+  --sky: #1E2E36; --paper: #171512; --card: #221F1B; --line: #3A332B; --muted: #BBAA98;
+  --bed: #9A6A43; --bed-dark: #6E4A30; --track: #2E2923; color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --soil: #F1E6D8; --leaf: #8FCB86; --sprout: #9CCB69; --carrot: #F0954F; --radish: #E5627A;
+  --sky: #1E2E36; --paper: #171512; --card: #221F1B; --line: #3A332B; --muted: #BBAA98;
+  --bed: #9A6A43; --bed-dark: #6E4A30; --track: #2E2923; color-scheme: dark; }
+
+* { box-sizing: border-box; }
+body { background: var(--paper); color: var(--soil); font-family: var(--font-body); font-size: 17px; line-height: 1.55; }
+.wrap { max-width: 1080px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+h1, h2, h3 { font-family: var(--font-display); line-height: 1.08; margin: 0; text-wrap: balance; }
+h1 { font-size: clamp(38px, 6.4vw, 72px); font-weight: 800; letter-spacing: -0.02em; }
+h2 { font-size: clamp(28px, 3.6vw, 40px); font-weight: 800; letter-spacing: -0.01em; }
+h3 { font-size: 21px; font-weight: 700; }
+p { margin: 0; }
+.eyebrow { font-family: var(--font-display); font-weight: 700; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--leaf); }
+.num { font-variant-numeric: tabular-nums; }
+
+.demo { background: var(--soil); color: var(--paper); font-size: 14px; }
+.demo .wrap { padding-block: 8px; display: flex; gap: 8px; flex-wrap: wrap; justify-content: space-between; }
+
+.top { padding-block: 22px; display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; font-size: 15px; color: var(--muted); }
+.top b { color: var(--soil); font-family: var(--font-display); font-size: 17px; }
+
+.hero { display: grid; grid-template-columns: 1.05fr 1fr; gap: 40px; align-items: center; padding-block: 12px 40px; }
+.hero > * { min-width: 0; }
+.hero .lead { font-size: 20px; color: var(--muted); max-width: 34ch; margin-top: 18px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+.chip { font-size: 14px; font-weight: 700; padding: 6px 12px; border-radius: 999px; background: var(--track); color: var(--soil); }
+.scene { width: 100%; max-width: 100%; height: auto; display: block; border-radius: 28px; }
+
+.fund { background: var(--card); border: 1px solid var(--line); border-radius: 24px; padding: 28px; display: grid; grid-template-columns: 1.4fr 1fr; gap: 32px; }
+.fund > * { min-width: 0; }
+.amount { font-family: var(--font-display); font-weight: 800; font-size: clamp(40px, 6vw, 60px); line-height: 1; }
+.amount small { font-size: 0.42em; font-weight: 700; color: var(--muted); }
+.bar { position: relative; height: 26px; background: var(--track); border-radius: 999px; margin-top: 18px; overflow: hidden; }
+.bar span { position: absolute; inset: 0 auto 0 0; background: repeating-linear-gradient(135deg, var(--sprout) 0 14px, var(--leaf) 14px 16px); border-radius: 999px; }
+.stats { display: flex; gap: 28px; flex-wrap: wrap; margin-top: 16px; color: var(--muted); font-size: 15px; }
+.stats b { display: block; color: var(--soil); font-family: var(--font-display); font-size: 24px; }
+.give h3 { margin-bottom: 10px; }
+.field { display: grid; gap: 2px; padding: 10px 0; border-top: 1px dashed var(--line); }
+.field span { font-size: 13px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
+.field code { font-family: var(--font-body); font-weight: 700; font-size: 17px; overflow-wrap: anywhere; }
+.copy { margin-top: 12px; font: 700 15px var(--font-body); color: var(--paper); background: var(--leaf); border: 0; border-radius: 12px; padding: 11px 16px; cursor: pointer; width: 100%; }
+.copy:focus-visible, a:focus-visible { outline: 3px solid var(--carrot); outline-offset: 2px; }
+.hint { font-size: 14px; color: var(--muted); margin-top: 10px; }
+
+section.block { padding-block: 56px 8px; }
+.head { display: flex; justify-content: space-between; align-items: end; gap: 16px; flex-wrap: wrap; margin-bottom: 24px; }
+.head p { max-width: 46ch; color: var(--muted); }
+
+.needs { display: grid; gap: 12px; }
+.need { display: grid; grid-template-columns: 64px 1fr 190px; gap: 20px; align-items: center; background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 16px 20px; }
+.need > * { min-width: 0; }
+.need svg { width: 64px; height: 64px; }
+.need p { color: var(--muted); font-size: 15px; margin-top: 2px; }
+.need .state { display: grid; gap: 6px; text-align: right; font-size: 15px; }
+.need .mini { height: 10px; background: var(--track); border-radius: 999px; overflow: hidden; }
+.need .mini i { display: block; height: 100%; background: var(--sprout); border-radius: 999px; }
+.pill { justify-self: end; font-size: 13px; font-weight: 700; padding: 3px 10px; border-radius: 999px; }
+.pill.done { background: var(--leaf); color: var(--paper); }
+.pill.part { background: var(--carrot); color: #2A1608; }
+.pill.open { background: var(--track); color: var(--soil); }
+
+.kid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.kid div { background: var(--sky); border-radius: 20px; padding: 22px; display: grid; gap: 8px; align-content: start; }
+.kid .big { font-family: var(--font-display); font-weight: 800; font-size: 38px; line-height: 1; color: var(--leaf); }
+.kid p { font-size: 15.5px; }
+
+.year { position: relative; display: grid; gap: 0; }
+.step { display: grid; grid-template-columns: 120px 28px 1fr; gap: 16px; padding-bottom: 22px; }
+.step > * { min-width: 0; }
+.step time { font-family: var(--font-display); font-weight: 700; color: var(--muted); text-align: right; padding-top: 2px; }
+.dot { width: 22px; height: 22px; border-radius: 50%; border: 3px solid var(--sprout); background: var(--paper); margin-top: 3px; position: relative; }
+.dot::after { content: ""; position: absolute; left: 50%; top: 22px; width: 3px; height: calc(100% + 40px); background: var(--line); transform: translateX(-50%); }
+.step:last-child .dot::after { display: none; }
+.step.done .dot { background: var(--sprout); }
+.step.now .dot { border-color: var(--carrot); background: var(--carrot); box-shadow: 0 0 0 6px color-mix(in srgb, var(--carrot) 25%, transparent); }
+.step p { color: var(--muted); font-size: 15.5px; margin-top: 3px; }
+.step .tag { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--leaf); }
+.step.now .tag { color: var(--carrot); }
+
+.plants { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+.plants span { border: 1.5px solid var(--line); border-radius: 999px; padding: 6px 14px; font-size: 15px; background: var(--card); }
+
+footer { margin-top: 64px; background: var(--card); border-top: 1px solid var(--line); }
+footer .wrap { padding-block: 32px; display: grid; grid-template-columns: 1.3fr 1fr; gap: 32px; font-size: 15px; color: var(--muted); }
+footer .wrap > * { min-width: 0; }
+footer h3 { color: var(--soil); margin-bottom: 8px; font-size: 18px; }
+
+@media (max-width: 820px) {
+  .hero, .fund, footer .wrap { grid-template-columns: 1fr; }
+  .kid { grid-template-columns: 1fr; }
+  .need { grid-template-columns: 52px 1fr; }
+  .need svg { width: 52px; height: 52px; }
+  .need .state { grid-column: 1 / -1; text-align: left; }
+  .pill { justify-self: start; }
+  .step { grid-template-columns: 74px 24px 1fr; gap: 12px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .bar span { animation: grow 1.4s ease-out both; }
+  @keyframes grow { from { width: 8%; } }
+}
+</style>
+
+<div class="demo"><div class="wrap"><span><b>Beispielseite</b> zur Veranschaulichung – Projekt, Zahlen und Kontodaten sind fiktiv.</span><span>Förderverein Sulinger KiTas</span></div></div>
+
+<div class="wrap">
+  <div class="top"><span><b>Förderverein Sulinger KiTas</b> · Projekt der Kita Sule Racker</span><span>zweckgebundenes Projekt Nr. 01</span></div>
+
+  <div class="hero">
+    <div>
+      <div class="eyebrow">Ein Garten auf Kinderhöhe</div>
+      <h1>Wir pflanzen, gießen und ernten selbst.</h1>
+      <p class="lead">Die Sule Racker bekommen einen Gemüsegarten, den Kinder von 2 bis 6 Jahren selbst bewirtschaften: Beete in Griffhöhe, eigene Werkzeuge, Wasser aus der Pumpe.</p>
+      <div class="chips"><span class="chip">für 2–6 Jahre</span><span class="chip">Beethöhe 50 cm</span><span class="chip">nur ungiftige Pflanzen</span></div>
+    </div>
+    <svg class="scene" viewBox="0 0 560 420" role="img" aria-label="Illustration: drei niedrige Hochbeete mit Möhren, Radieschen und Erdbeeren, daneben eine kleine Gießkanne, eine Wasserpumpe und ein Messstab mit 50 cm">
+      <rect width="560" height="420" fill="var(--sky)"/>
+      <circle cx="470" cy="80" r="42" fill="var(--carrot)" opacity="0.9"/>
+      <g stroke="var(--carrot)" stroke-width="5" stroke-linecap="round" opacity="0.7">
+        <line x1="470" y1="18" x2="470" y2="4"/><line x1="532" y1="80" x2="546" y2="80"/><line x1="514" y1="36" x2="524" y2="26"/><line x1="426" y1="36" x2="416" y2="26"/><line x1="408" y1="80" x2="394" y2="80"/>
+      </g>
+      <path d="M0 300 Q140 270 280 292 T560 286 V420 H0Z" fill="var(--sprout)" opacity="0.55"/>
+      <rect x="0" y="330" width="560" height="90" fill="var(--bed-dark)" opacity="0.35"/>
+      <!-- Beet 1: Möhren -->
+      <g>
+        <rect x="34" y="262" width="150" height="80" rx="8" fill="var(--bed)"/>
+        <rect x="34" y="262" width="150" height="14" rx="6" fill="var(--bed-dark)"/>
+        <g fill="var(--leaf)">
+          <path d="M60 262 l-8 -34 l12 22 l4 -30 l6 30 l12 -20 l-8 32z"/>
+          <path d="M104 262 l-8 -38 l12 24 l4 -32 l6 32 l12 -22 l-8 36z"/>
+          <path d="M148 262 l-8 -30 l12 20 l4 -26 l6 26 l12 -18 l-8 28z"/>
+        </g>
+        <path d="M100 286 l12 0 l-6 30z" fill="var(--carrot)"/>
+      </g>
+      <!-- Beet 2: Radieschen -->
+      <g>
+        <rect x="206" y="262" width="150" height="80" rx="8" fill="var(--bed)"/>
+        <rect x="206" y="262" width="150" height="14" rx="6" fill="var(--bed-dark)"/>
+        <g fill="var(--leaf)">
+          <ellipse cx="236" cy="244" rx="9" ry="18" transform="rotate(-25 236 244)"/><ellipse cx="250" cy="242" rx="9" ry="18" transform="rotate(20 250 242)"/>
+          <ellipse cx="290" cy="240" rx="9" ry="20" transform="rotate(-20 290 240)"/><ellipse cx="304" cy="240" rx="9" ry="20" transform="rotate(22 304 240)"/>
+          <ellipse cx="334" cy="246" rx="8" ry="16" transform="rotate(-18 334 246)"/>
+        </g>
+        <circle cx="243" cy="262" r="11" fill="var(--radish)"/><circle cx="297" cy="261" r="12" fill="var(--radish)"/><circle cx="336" cy="263" r="9" fill="var(--radish)"/>
+      </g>
+      <!-- Beet 3: Erdbeeren -->
+      <g>
+        <rect x="378" y="262" width="150" height="80" rx="8" fill="var(--bed)"/>
+        <rect x="378" y="262" width="150" height="14" rx="6" fill="var(--bed-dark)"/>
+        <g fill="var(--leaf)"><circle cx="404" cy="250" r="14"/><circle cx="420" cy="242" r="13"/><circle cx="462" cy="248" r="15"/><circle cx="480" cy="240" r="12"/><circle cx="508" cy="250" r="13"/></g>
+        <path d="M418 258 q8 0 8 10 q-8 12 -16 0 q0 -10 8 -10z" fill="var(--radish)"/>
+        <path d="M478 256 q8 0 8 10 q-8 12 -16 0 q0 -10 8 -10z" fill="var(--radish)"/>
+      </g>
+      <!-- Messstab -->
+      <g>
+        <rect x="14" y="262" width="10" height="80" fill="var(--paper)" stroke="var(--soil)" stroke-width="2"/>
+        <g stroke="var(--soil)" stroke-width="2"><line x1="14" y1="282" x2="20" y2="282"/><line x1="14" y1="302" x2="20" y2="302"/><line x1="14" y1="322" x2="20" y2="322"/></g>
+      </g>
+      <rect x="10" y="226" width="58" height="26" rx="13" fill="var(--paper)"/>
+      <text x="39" y="244" text-anchor="middle" font-family="Atkinson Hyperlegible, Verdana, sans-serif" font-size="15" font-weight="700" fill="var(--soil)">50 cm</text>
+      <!-- Gießkanne -->
+      <g transform="translate(150 352)">
+        <rect x="0" y="0" width="46" height="36" rx="8" fill="var(--carrot)"/>
+        <path d="M46 10 L76 -10 L80 -4 L50 20z" fill="var(--carrot)"/>
+        <path d="M6 0 q17 -22 34 0" fill="none" stroke="var(--carrot)" stroke-width="6"/>
+      </g>
+      <!-- Pumpe -->
+      <g transform="translate(300 330)">
+        <rect x="0" y="10" width="26" height="60" rx="4" fill="var(--leaf)"/>
+        <rect x="26" y="20" width="22" height="10" rx="4" fill="var(--leaf)"/>
+        <path d="M13 10 L-14 -14" stroke="var(--leaf)" stroke-width="8" stroke-linecap="round"/>
+        <g fill="#7FB8D6"><ellipse cx="48" cy="42" rx="4" ry="7"/><ellipse cx="54" cy="58" rx="4" ry="7"/></g>
+      </g>
+      <!-- Schaufel -->
+      <g transform="translate(420 356) rotate(-20)">
+        <rect x="0" y="0" width="8" height="40" rx="4" fill="var(--bed-dark)"/>
+        <path d="M-8 40 h24 v10 q-12 18 -24 0z" fill="var(--radish)"/>
+      </g>
+    </svg>
+  </div>
+
+  <div class="fund" aria-label="Spendenstand">
+    <div>
+      <div class="eyebrow">Spendenstand</div>
+      <div class="amount num">3.180 € <small>von 4.800 €</small></div>
+      <div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="4800" aria-valuenow="3180" aria-label="66 Prozent finanziert"><span style="width:66%"></span></div>
+      <div class="stats">
+        <div><b class="num">66 %</b>finanziert</div>
+        <div><b class="num">41</b>Spenden</div>
+        <div><b class="num">1.620 €</b>fehlen noch</div>
+        <div><b class="num">4 von 6</b>Bedarfen gedeckt</div>
+      </div>
+    </div>
+    <div class="give">
+      <h3>So spenden Sie</h3>
+      <div class="field"><span>Empfänger</span><code>Förderverein Sulinger KiTas e. V.</code></div>
+      <div class="field"><span>IBAN</span><code>DE00 0000 0000 0000 0000 00</code></div>
+      <div class="field"><span>Verwendungszweck</span><code id="vz">Sule Racker – Gemüsegarten</code></div>
+      <button class="copy" id="copyBtn" type="button">Verwendungszweck kopieren</button>
+      <p class="hint">Mit diesem Verwendungszweck fließt Ihre Spende ausschließlich in dieses Projekt. Per Überweisung, ohne Gebühren.</p>
+    </div>
+  </div>
+
+  <section class="block">
+    <div class="head">
+      <div><div class="eyebrow">Was der Garten braucht</div><h2>Sechs Bedarfe, einer nach dem anderen</h2></div>
+      <p>Wir kaufen, sobald ein Bedarf gedeckt ist. So wächst der Garten mit den Spenden.</p>
+    </div>
+    <div class="needs">
+      <div class="need">
+        <svg viewBox="0 0 64 64" aria-hidden="true"><rect x="6" y="30" width="52" height="24" rx="4" fill="var(--bed)"/><rect x="6" y="30" width="52" height="6" rx="3" fill="var(--bed-dark)"/><path d="M18 30 l-4 -14 l6 8 l2 -12 l3 12 l5 -8 l-4 14z" fill="var(--leaf)"/><path d="M40 30 l-4 -12 l6 7 l2 -10 l3 10 l5 -7 l-4 12z" fill="var(--leaf)"/></svg>
+        <div><h3>Drei Hochbeete auf Kinderhöhe</h3><p>Lärchenholz, 50 cm hoch, 80 cm tief – jede Mitte ist für kurze Arme erreichbar.</p></div>
+        <div class="state"><span class="num">1.350 € von 1.350 €</span><div class="mini"><i style="width:100%"></i></div><span class="pill done">Gedeckt</span></div>
+      </div>
+      <div class="need">
+        <svg viewBox="0 0 64 64" aria-hidden="true"><rect x="12" y="26" width="26" height="22" rx="5" fill="var(--carrot)"/><path d="M38 32 L54 20 L56 24 L40 38z" fill="var(--carrot)"/><path d="M15 26 q10 -14 20 0" fill="none" stroke="var(--carrot)" stroke-width="4"/></svg>
+        <div><h3>12 Gießkannen und Werkzeug in Kindergröße</h3><p>Leichte 1-Liter-Kannen, kurze Schaufeln, Harken und Handschuhe ab Größe 3.</p></div>
+        <div class="state"><span class="num">380 € von 380 €</span><div class="mini"><i style="width:100%"></i></div><span class="pill done">Gedeckt</span></div>
+      </div>
+      <div class="need">
+        <svg viewBox="0 0 64 64" aria-hidden="true"><rect x="16" y="12" width="32" height="42" rx="8" fill="var(--leaf)"/><rect x="16" y="22" width="32" height="4" fill="var(--sprout)"/><rect x="16" y="40" width="32" height="4" fill="var(--sprout)"/><rect x="48" y="44" width="10" height="5" rx="2" fill="var(--soil)"/></svg>
+        <div><h3>Regentonne mit Kinderhahn</h3><p>300 Liter, Hahn auf 35 cm Höhe – die Kinder füllen ihre Kannen selbst.</p></div>
+        <div class="state"><span class="num">290 € von 290 €</span><div class="mini"><i style="width:100%"></i></div><span class="pill done">Gedeckt</span></div>
+      </div>
+      <div class="need">
+        <svg viewBox="0 0 64 64" aria-hidden="true"><rect x="20" y="20" width="14" height="36" rx="3" fill="var(--leaf)"/><rect x="34" y="26" width="14" height="6" rx="3" fill="var(--leaf)"/><path d="M27 20 L12 8" stroke="var(--leaf)" stroke-width="5" stroke-linecap="round"/><ellipse cx="48" cy="42" rx="3" ry="5" fill="#7FB8D6"/><ellipse cx="52" cy="54" rx="3" ry="5" fill="#7FB8D6"/></svg>
+        <div><h3>Schwengelpumpe mit Matschrinne</h3><p>Wasser zum Pumpen statt Schlauch: sparsam, sicher und für Zweijährige schon zu schaffen.</p></div>
+        <div class="state"><span class="num">1.100 € von 1.100 €</span><div class="mini"><i style="width:100%"></i></div><span class="pill done">Gedeckt</span></div>
+      </div>
+      <div class="need">
+        <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="22" cy="28" r="12" fill="var(--leaf)"/><circle cx="40" cy="24" r="12" fill="var(--leaf)"/><circle cx="24" cy="44" r="6" fill="var(--radish)"/><circle cx="36" cy="46" r="6" fill="var(--radish)"/><circle cx="44" cy="40" r="5" fill="var(--radish)"/></svg>
+        <div><h3>Beerensträucher und Saatgut fürs erste Jahr</h3><p>Johannisbeeren, Himbeeren, Erdbeerpflanzen und Samen für eine ganze Saison.</p></div>
+        <div class="state"><span class="num">60 € von 420 €</span><div class="mini"><i style="width:14%"></i></div><span class="pill part">Läuft</span></div>
+      </div>
+      <div class="need">
+        <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M8 18 L56 12 L44 40z" fill="var(--carrot)"/><line x1="8" y1="18" x2="8" y2="56" stroke="var(--soil)" stroke-width="3"/><line x1="56" y1="12" x2="56" y2="56" stroke="var(--soil)" stroke-width="3"/></svg>
+        <div><h3>Schattensegel über den Beeten</h3><p>Schützt Kinder und Pflanzen in der Mittagssonne, damit im Sommer gegärtnert werden kann.</p></div>
+        <div class="state"><span class="num">0 € von 1.260 €</span><div class="mini"><i style="width:0%"></i></div><span class="pill open">Offen</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="head">
+      <div><div class="eyebrow">Gedacht für 2- bis 6-Jährige</div><h2>Ein Garten, den Kinder selbst schaffen</h2></div>
+    </div>
+    <div class="kid">
+      <div><span class="big num">50 cm</span><h3>Alles in Griffhöhe</h3><p>Beete, Wasserhahn und Werkzeugwand sind so niedrig, dass auch die Jüngsten ohne Hilfe drankommen.</p></div>
+      <div><span class="big num">7 Tage</span><h3>Schnelle Erfolge</h3><p>Kresse keimt in einer Woche, Radieschen sind nach etwa vier Wochen erntereif – Geduld, die Kinder schaffen.</p></div>
+      <div><span class="big num">0</span><h3>Giftige Pflanzen</h3><p>Angebaut wird nur, was Kinder bedenkenlos probieren dürfen. Jedes Beet hat ein Bildschild statt Text.</p></div>
+    </div>
+    <div class="plants" aria-label="Geplante Pflanzen">
+      <span>Kresse</span><span>Radieschen</span><span>Möhren</span><span>Zuckererbsen</span><span>Erdbeeren</span><span>Kapuzinerkresse</span><span>Sonnenblumen</span><span>Schnittlauch</span>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="head">
+      <div><div class="eyebrow">Das Gartenjahr</div><h2>Wo wir gerade stehen</h2></div>
+      <p>Wir berichten hier, sobald etwas umgesetzt ist.</p>
+    </div>
+    <div class="year">
+      <div class="step done"><time>Sep 2026</time><span class="dot"></span><div><span class="tag">Erledigt</span><h3>Idee im Elternrat vorgestellt</h3><p>Kinder haben gemalt, was im Garten wachsen soll. Die meisten Bilder zeigten Erdbeeren.</p></div></div>
+      <div class="step now"><time>Okt 2026</time><span class="dot"></span><div><span class="tag">Jetzt</span><h3>Spenden sammeln</h3><p>Hochbeete, Werkzeug, Regentonne und Pumpe sind schon finanziert. Es fehlen Beeren, Saatgut und das Schattensegel.</p></div></div>
+      <div class="step"><time>Nov 2026</time><span class="dot"></span><div><span class="tag">Geplant</span><h3>Hochbeete aufbauen</h3><p>An einem Elternsamstag; die Kinder füllen die Erde mit ihren eigenen Schaufeln ein.</p></div></div>
+      <div class="step"><time>Feb 2027</time><span class="dot"></span><div><span class="tag">Geplant</span><h3>Vorziehen auf der Fensterbank</h3><p>Kresse und Sonnenblumen in Eierkartons, jedes Kind mit eigenem Topf.</p></div></div>
+      <div class="step"><time>Apr 2027</time><span class="dot"></span><div><span class="tag">Geplant</span><h3>Aussaat im Beet</h3><p>Radieschen, Möhren und Zuckererbsen; Beerensträucher werden gepflanzt.</p></div></div>
+      <div class="step"><time>Jun 2027</time><span class="dot"></span><div><span class="tag">Geplant</span><h3>Erste Ernte und Gartenfest</h3><p>Radieschenbrot zum Frühstück und ein Fest für alle Familien.</p></div></div>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <h3>Zweckgebunden heißt: Ihr Geld bleibt in diesem Projekt</h3>
+      <p>Spenden mit dem Verwendungszweck „Sule Racker – Gemüsegarten“ verwendet der Förderverein ausschließlich für diesen Garten. Lässt sich ein Bedarf nicht umsetzen, fließt das Geld in einen möglichst ähnlichen Zweck derselben Kita.</p>
+    </div>
+    <div>
+      <h3>Förderverein Sulinger KiTas e. V. (in Gründung)</h3>
+      <p>Fördert alle Kindertageseinrichtungen in Trägerschaft der Stadt Sulingen. Dies ist eine Beispielseite; Zahlen, Termine und Kontodaten sind fiktiv.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('copyBtn').addEventListener('click', function () {
+  var btn = this, text = document.getElementById('vz').textContent;
+  function selectFallback() {
+    var r = document.createRange(); r.selectNodeContents(document.getElementById('vz'));
+    var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+    btn.textContent = 'Markiert – jetzt kopieren';
+  }
+  try {
+    navigator.clipboard.writeText(text).then(function () { btn.textContent = 'Kopiert'; setTimeout(function(){ btn.textContent = 'Verwendungszweck kopieren'; }, 2000); }, selectFallback);
+  } catch (e) { selectFallback(); }
+});
+</script>
+
+</body></html>
