@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="60 15 585 700" role="img" aria-label="Förderverein Sulinger KiTas – Bildzeichen">
+  <title>Förderverein Sulinger KiTas – Bildzeichen</title>
+  <!-- Stamm, Äste und Bodenlinie in Anthrazit -->
+  <g fill="#1C1C1C" stroke="#1C1C1C" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M329 345 A12 12 0 0 1 353 345 L366 520 L390 688 L294 688 L316 520 Z" stroke="none"/>
+    <path d="M330 505 Q275 438 210 386" fill="none" stroke-width="30"/>
+    <path d="M360 498 Q405 412 488 340" fill="none" stroke-width="30"/>
+    <rect x="145" y="673" width="393" height="35" rx="17.5" stroke="none"/>
+  </g>
+  <!-- Blätter: sieben überlappende, transparente Kreise in Sulinger Gold und Rot (über den Ästen) -->
+  <g>
+    <circle cx="167" cy="128" r="75"  fill="#E2261C" fill-opacity="0.42"/>
+    <circle cx="543" cy="95"  r="68"  fill="#F2B33D" fill-opacity="0.62"/>
+    <circle cx="168" cy="315" r="103" fill="#F2B33D" fill-opacity="0.66"/>
+    <circle cx="348" cy="170" r="145" fill="#F2B33D" fill-opacity="0.92"/>
+    <circle cx="252" cy="253" r="62"  fill="#E2261C" fill-opacity="0.50"/>
+    <circle cx="530" cy="288" r="103" fill="#E2261C" fill-opacity="0.72"/>
+    <circle cx="424" cy="233" r="83"  fill="#E2261C" fill-opacity="0.82"/>
+  </g>
+</svg>
