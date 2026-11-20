@@ -22,10 +22,11 @@ END:DAYLIGHT
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:infoabend-20261123@foerderverein.on-forge.com
-DTSTAMP:20261119T120000Z
+SEQUENCE:1
+DTSTAMP:20261120T090000Z
 DTSTART;TZID=Europe/Berlin:20261123T190000
 SUMMARY:Infoabend Förderverein Sulinger KiTas
-LOCATION:Alte Bürgermeisterei\, Sulingen
+LOCATION:Ratssaal im Rathaus\, Stadt Sulingen
 DESCRIPTION:Wir stellen den Förderverein für alle städtischen KiTas in Sulingen vor. Mehr: https://foerderverein.on-forge.com/
 URL:https://foerderverein.on-forge.com/
 END:VEVENT
